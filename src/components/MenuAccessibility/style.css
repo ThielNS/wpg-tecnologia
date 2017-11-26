@@ -1,0 +1,21 @@
+.menu-accessibility {
+  padding: 10px;
+  background-color: #73537b;
+}
+.menu-accessibility ul {
+  list-style: none;
+}
+.menu-accessibility ul li {
+  margin-right: 10px;
+  font-size: 16px;
+}
+.menu-accessibility ul li button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+@media (max-width: 750px) {
+  .menu-accessibility {
+    display: none;
+  }
+}

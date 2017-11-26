@@ -1,0 +1,15 @@
+.footer {
+  background-color: #999;
+  padding: 50px 0;
+  border-top: 10px solid #777;
+}
+.footer .box-footer {
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .footer .box-footer {
+    margin-bottom: 20px;
+  }
+}

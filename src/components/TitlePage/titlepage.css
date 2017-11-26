@@ -1,0 +1,9 @@
+.title-page {
+  width: 100%;
+  background-image: linear-gradient(40deg,#4e3d5f,#956896);
+  text-align: center;
+  padding: 90px 0;
+}
+.title-page h2 {
+  color: #fff;
+}

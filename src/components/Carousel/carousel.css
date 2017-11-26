@@ -1,0 +1,61 @@
+.carousel {
+  background-color: #999;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.carousel .slick-dots {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+.carousel .slick-dots .slick-active button::before {
+  color: #fff;
+}
+.carousel .slick-dots li button::before {
+  color: #fff;
+}
+
+.carousel .carousel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.carousel .carousel-item .carousel-legend {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(25deg,rgba(78,61,95,.8),rgba(149,104,150,.8));
+}
+.carousel .carousel-item .carousel-legend h2 {
+  color: #fff;
+}
+.carousel .carousel-controllers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.carousel .slick-arrow::before {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 750px) {
+  .carousel .slick-track {
+    height: 300px;
+  }
+  .carousel .carousel-legend {
+    padding: 30px;
+  }
+}
