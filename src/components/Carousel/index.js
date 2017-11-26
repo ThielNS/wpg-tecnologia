@@ -25,7 +25,7 @@ class Carousel extends Component {
       accessibility: true,
       autoplay: true,
       pauseOnHover: true,
-      fade: true,
+      fade: false,
       nextArrow: <ArrowButton position={{right: '15px'}}/>,
       prevArrow: <ArrowButton position={{left: '15px'}}/>
     };
