@@ -5,7 +5,7 @@ class TrabalheConosco extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pais: 'Brasil',
+      pais: 'Brasil'
     }
   }
 
@@ -13,7 +13,24 @@ class TrabalheConosco extends Component {
     this.setState({ pais: e.target.value });
   }
 
+  searchCep = (e) => {
+    fetch(`https://viacep.com.br/ws/${e.target.value}/json/`)
+    .then(response => response.json())
+    .then((data) => {
+      console.log(data);
+      document.getElementById('logradouro').value = data.logradouro;
+      document.getElementById('bairro').value = data.bairro;
+      document.getElementById('estado').value = data.uf;
+      document.getElementById('complemento').value = data.complemento;
+      document.getElementById('cep').style.borderColor = '#ddd';
+    })
+    .catch(e => {
+      document.getElementById('cep').style.borderColor = '#e34c26';
+    });
+  }
+
   render() {
+    console.log(this.state.data);
     return (
       <div className="container">
         <section className="card col-12">
@@ -28,11 +45,13 @@ class TrabalheConosco extends Component {
             <input type="url" placeholder="Perfil do GitHub" className="col-6"/>
             <div className="row -flex-wrap col-12">
               <label className="title-form">Endereço:</label>
-              <input type="text" placeholder="*Logradouro" className="col-6" required/>
-              <input type="text" placeholder="*Número" className="col-6" required/>
-              <input type="text" placeholder="*Bairro" className="col-6" required/>
-              <input type="text" placeholder="*Estado" className="col-6" required/>
-              <input type="text" placeholder="*Pais" value={this.state.pais} className="col-6" onChange={this.handlePais} required/>
+              <input type="text" id="cep" placeholder="*CEP" className="col-6" onBlur={this.searchCep} required/>
+              <input type="text" id="logradouro" placeholder="*Logradouro" className="col-6" required/>
+              <input type="text" id="numero" placeholder="*Número" className="col-6" required/>
+              <input type="text" id="complemento" placeholder="complemento" className="col-6"/>
+              <input type="text" id="bairro" placeholder="*Bairro" className="col-6" required/>
+              <input type="text" id="estado" placeholder="*Estado" className="col-6" required/>
+              <input type="text" id="pais" placeholder="*Pais" value={this.state.pais} className="col-6" onChange={this.handlePais} required/>
             </div>
             <div className="col-6">
             <label className="title-form">*Data de Nascimento:</label>

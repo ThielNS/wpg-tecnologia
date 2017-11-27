@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import DefaultLayout from '../template/DefaultLayout';
+import MainLayout from '../template/MainLayout';
 
 const mapStateToProps = state => {
   return { accessibility: state.accessibilityReducer };
 };
 
-export default connect(mapStateToProps)(DefaultLayout);
+export default connect(mapStateToProps)(MainLayout);

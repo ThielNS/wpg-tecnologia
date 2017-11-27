@@ -17,7 +17,6 @@ const store = createStore(
 
 class App extends Component {
   render() {
-    console.log(store.getState().accessibilityReducer);
     return (
       <Provider store={store}>
         <TemplateContainer/>

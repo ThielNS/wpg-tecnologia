@@ -13,23 +13,26 @@ class MenuAccessibility extends Component {
 
   changeSizeMore = (e) => {
     e.preventDefault();
-    this.setState({ sizeFont: this.state.sizeFont + 2});
-    localStorage.setItem('sizeFont', this.state.sizeFont);
-    this.props.changeFont(this.state.sizeFont);
+    let { fontSize } = this.props.accessibility;
+    fontSize = fontSize + 2;
+    this.setState({ fontSize });
+    this.props.changeFont(fontSize);
   }
 
   changeSizeMinus = (e) => {
     e.preventDefault();
-    this.setState({ sizeFont: this.state.sizeFont - 2 });
-    localStorage.setItem('sizeFont', this.state.sizeFont);
-    this.props.changeFont(this.state.sizeFont);
+    let { fontSize } = this.props.accessibility;
+    fontSize = fontSize - 2;
+    this.setState({ fontSize });
+    this.props.changeFont(fontSize);
   }
 
   changeContrast= (e) => {
     e.preventDefault();
-    this.setState({ contrast: !this.state.contrast });
-    localStorage.setItem('contrast', this.state.contrast);
-    this.props.changeContrast(this.state.contrast);
+    let { contrast } = this.props.accessibility;
+    contrast = !contrast;
+    this.setState({ contrast });
+    this.props.changeContrast(contrast);
   }
 
   render() {

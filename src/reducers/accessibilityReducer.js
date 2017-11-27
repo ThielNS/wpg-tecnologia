@@ -1,19 +1,11 @@
-const accessibility = ( state = [{ fontSize: 16, contrast: false }], action ) => {
+const accessibility = ( state = {}, action ) => {
   switch (action.type) {
     case 'SIZE_FONT':
-      const size = state.map(state => {
-        state.fontSize = action.size;
-        return state;
-      });
-      return size;
+      return {...state, fontSize: action.size};
     case 'CONTRAST':
-      const contrast = state.map(state => {
-        state.contrast = action.contrast;
-        return state;
-      });
-      return contrast;
+      return {...state, contrast: action.contrast};
     default:
-      return state;
+      return {...state, fontSize: 16, contrast: false};
   }
 }
 

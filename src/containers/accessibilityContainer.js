@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { sizeFont, contrast } from '../actions/accessibilityAction';
 import MenuAccessibility from '../components/MenuAccessibility';
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({ accessibility: state.accessibilityReducer });
 
 const mapDispatchToProps = dispatch => ({
   changeFont: size => {

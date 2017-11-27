@@ -16,35 +16,16 @@ class DefaultLayout extends Component {
   }
 
   render() {
-    console.log(this.props);
-    const { fontSize } = this.props.accessibility[0];
-    const style = {fontSize: `${fontSize}px`};
-    const contrast = this.props.accessibility[0].contrast ? 'contrast' : '';
-
+    const { Component, ...restProps } = this.props;
     return (
-      <BrowserRouter>
-        <main className={contrast} style={style}>
-          <MenuAccessibility/>
-          <Header/>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/sobre" component={Sobre}/>
-              <Route exact path="/Servicos" component={Servicos}/>
-              <Route exact path="/trabalhe-conosco" component={TrabalheConosco}/>
-              <Route exact path="/contato" component={Contato}/>
-            </Switch>
-          <Footer/>
-        </main>
-      </BrowserRouter>
+      <div>
+        <MenuAccessibility/>
+        <Header/>
+        <Route {...restProps} render={Component}/>
+        <Footer/>
+      </div>
     );
   }
 }
 
 export default DefaultLayout;
-
-
-
-// <Route exact path="/sobre" component={Sobre}/>
-// <Route exact path="/servicos" component={Servicos}/>
-// <Route exact path="/trabalhe-conosco" component={TrabalheConosco}/>
-// <Route exact path="/contato" component={Contato}/>

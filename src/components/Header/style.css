@@ -39,6 +39,7 @@
     width: 0;
     overflow: hidden;
     transition: .3s;
+    transition-delay: .1s;
     background-color: #583b5f;
     box-shadow: -2px 4px 10px #000;
     flex-direction: column;

@@ -13,8 +13,9 @@
   background-color: transparent;
   border: none;
   color: #fff;
+  outline-color: #5b3f63;
 }
-@media (max-width: 750px) {
+@media (max-width: 500px) {
   .menu-accessibility {
     display: none;
   }
