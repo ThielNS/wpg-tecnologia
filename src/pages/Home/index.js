@@ -33,7 +33,7 @@ class Home extends Component {
   renderDestaque() {
     const { destaques } = this.state;
     return destaques.map((destaque, index) => (
-        <div key={index} className={index == 0 ? 'card -destaque col-4' : 'card col-4'}>
+        <div key={index} className={index === 0 ? 'card -destaque col-4' : 'card col-4'}>
           <h3 className="_text-center">{destaque.title}</h3>
           <p className="_margin-bottom">{destaque.descripiton}</p>
           <p className="_text-center"><Link to={destaque.to} className="button -primare">{destaque.linkTitle}</Link></p>

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { connect } from 'react-redux';
 import MainLayout from '../template/MainLayout';
 

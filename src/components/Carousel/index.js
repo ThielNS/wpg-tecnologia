@@ -38,7 +38,11 @@ class Carousel extends Component {
                 <h2>Gerenciamento na Nuvem</h2>
               </Link>
             </div>
-            <img src="http://www.jcnet-it.com.br/wp-content/themes/jcnet/img/slider/cloud.jpg" className="col-12"/>
+            <img
+              src="http://www.jcnet-it.com.br/wp-content/themes/jcnet/img/slider/cloud.jpg"
+              className="col-12"
+              alt="Imagem figurativa sobre Gerenciamento de nuvem"
+            />
           </div>
           <div className="carousel-item">
             <div className="carousel-legend">
@@ -46,7 +50,11 @@ class Carousel extends Component {
                 <h2>Infraestrutura e Virtualização</h2>
               </Link>
             </div>
-            <img src="http://www.jcnet-it.com.br/wp-content/themes/jcnet/img/slider/infra.jpg" className="col-12"/>
+            <img
+              src="http://www.jcnet-it.com.br/wp-content/themes/jcnet/img/slider/infra.jpg"
+              className="col-12"
+              alt="Imagem figurativa Infraestrutura e Virtualização"
+            />
           </div>
           <div className="carousel-item">
             <div className="carousel-legend">
@@ -54,7 +62,11 @@ class Carousel extends Component {
                 <h2>Sistema de Gestão</h2>
               </Link>
             </div>
-            <img src="http://www.jcnet-it.com.br/wp-content/themes/jcnet/img/slider/custo.jpg" className="col-12"/>
+            <img
+              src="http://www.jcnet-it.com.br/wp-content/themes/jcnet/img/slider/custo.jpg"
+              className="col-12"
+              alt="Imagem figurativa sobre Sistema de Gestão"
+            />
           </div>
         </Slider>
       </div>

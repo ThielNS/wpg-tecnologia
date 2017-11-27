@@ -30,7 +30,6 @@ class TrabalheConosco extends Component {
   }
 
   render() {
-    console.log(this.state.data);
     return (
       <div className="container">
         <section className="card col-12">

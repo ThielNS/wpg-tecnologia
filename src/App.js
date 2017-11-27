@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import TemplateContainer from './containers/TemplateContainer';
-import DefaultLayout from './template/DefaultLayout';
 import servicosReducer from './reducers/servicosReducer';
 import accessibilityReducer from './reducers/accessibilityReducer';
 import './app.css';

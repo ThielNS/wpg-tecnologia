@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { connect } from 'react-redux';
 import { sizeFont, contrast } from '../actions/accessibilityAction';
 import MenuAccessibility from '../components/MenuAccessibility';

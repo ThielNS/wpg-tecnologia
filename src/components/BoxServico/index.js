@@ -4,7 +4,7 @@ import './boxservico.css';
 
 const BoxServico = ({ title, img, description }) => (
   <figure className="box-servico col-4">
-    <img src={img} alt=""/>
+    <img src={img} alt={`Imagem de representação do tipo de serviço ${title}.`}/>
     <figcaption>
       <h3>{title}</h3>
       <Route exact path="/" render={() => (
