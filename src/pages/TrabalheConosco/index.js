@@ -22,7 +22,7 @@ class TrabalheConosco extends Component {
       document.getElementById('bairro').value = data.bairro;
       document.getElementById('estado').value = data.uf;
       document.getElementById('complemento').value = data.complemento;
-      document.getElementById('cep').style.borderColor = '#ddd';
+      document.getElementById('cep').style.borderColor = '#4CAF50';
     })
     .catch(e => {
       document.getElementById('cep').style.borderColor = '#e34c26';
