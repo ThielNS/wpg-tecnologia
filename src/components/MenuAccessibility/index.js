@@ -6,7 +6,7 @@ class MenuAccessibility extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sizeFont: 16,
+      fontSize: 16,
       contrast: false,
     }
   }
@@ -14,17 +14,27 @@ class MenuAccessibility extends Component {
   changeSizeMore = (e) => {
     e.preventDefault();
     let { fontSize } = this.props.accessibility;
-    fontSize = fontSize + 2;
-    this.setState({ fontSize });
-    this.props.changeFont(fontSize);
+    if(fontSize <= 20) {
+      fontSize = fontSize + 2;
+      this.setState({ fontSize });
+      this.props.changeFont(fontSize);
+    }
   }
 
   changeSizeMinus = (e) => {
     e.preventDefault();
     let { fontSize } = this.props.accessibility;
-    fontSize = fontSize - 2;
-    this.setState({ fontSize });
-    this.props.changeFont(fontSize);
+    if(fontSize >= 12){
+      fontSize = fontSize - 2;
+      this.setState({ fontSize });
+      this.props.changeFont(fontSize);
+    }
+  }
+
+  changeNormal = (e) => {
+    e.preventDefault();
+    this.setState({ fontSize: 16 });
+    this.props.changeFont(16);
   }
 
   changeContrast= (e) => {
@@ -41,6 +51,9 @@ class MenuAccessibility extends Component {
         <ul className="row">
           <li>
             <button onClick={this.changeSizeMinus} title="Diminuir fonte">A- Diminuir Fonte</button>
+          </li>
+          <li>
+            <button onClick={this.changeNormal} title="Deixar a fonte normal">A Fonte Normal</button>
           </li>
           <li>
             <button onClick={this.changeSizeMore} title="Aumentar fonte">A+ Aumentar Fonte</button>

@@ -7,7 +7,7 @@ class Sobre extends Component {
     this.state = {
       topicos: [
         {
-          img: 'https://dev-res.thumbr.io/libraries/16/45/40/lib/1501743365472_4.jpg',
+          img: 'https://www.vetorsolucoes.com.br/wp-content/uploads/2016/10/capa-3.png',
           title: 'Visão',
           text: 'Ser o melhor fornecedor de Segurança da Informação, renomado e admirado nacionalmente como parceiro estratégico, por agir com paixão e energia para conquistar e encantar os clientes.',
         },

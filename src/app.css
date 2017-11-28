@@ -152,6 +152,9 @@ form button {
 .card h3 {
   margin-bottom: 10px;
 }
+.card p {
+  line-height: 21px;
+}
 
 ._margin-left-negative {
   margin-left: -2%;

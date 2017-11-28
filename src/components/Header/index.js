@@ -8,7 +8,7 @@ import './style.css';
 
 const Header = () => (
   <header className="header">
-    <nav className="row -align-start -justify-space-between">
+    <nav className="row -align-start -justify-space-between" style={{zIndex: '5'}}>
       <Logo/>
       <div className="row -direction-colum -align-start">
         <button className="toggle-bar"><i className="fa fa-bars"/></button>
